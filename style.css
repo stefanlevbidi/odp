@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    /* take the padding, border & margin into account when setting the width of an element */
+  }
+  
+  body {
+    background-color: cadetblue;
+    color: white;
+    font-family: monospace;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    min-height: 100vh;
+  }
+  
+  /* grid styles */
+  /* 
+  
+  grid-area order:
+  
+  grid-row-start
+  grid-column-start
+  grid-row-end
+  grid-column-end
+  
+  */
+  
+  header {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: tomato;
+    color: black;
+  }
+  
+  #results {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: aquamarine;
+    color: black;
+  }
+  
+  #main-container {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: lavender;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  footer {
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: brown;
+  }
+  
+  /* main styles */
+  #img-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #img-container img {
+    max-width: 30%;
+  }
